@@ -1,10 +1,25 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {ModuleWithProviders} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    // canActivate: [FeaturesGuard, CguGuard],
+    loadChildren: './features/home/home.module#HomeModule'
+  },
+  // {
+  //   path: 'localiser',
+  //   component: PartenairesComponent
+  // },
+  {
+    path: 'characterCreation',
+    loadChildren: './features/character-creation/character-creation.module#CharacterCreationModule'
+  }
+];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const AppRoutingModule: ModuleWithProviders = RouterModule.forChild(routes);
