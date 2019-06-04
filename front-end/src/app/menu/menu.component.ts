@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'anima-menu',
@@ -12,4 +12,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  get characterCreationLink():string{
+    return '/characterCreation';
+  }
 }

@@ -1,4 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<header></header><anima-menu></anima-menu>
+<header>
+  <anima-menu></anima-menu>
+</header>
 
-<router-outlet></router-outlet>
+<div id="wrapper">
+  <main *mobxAutorun>
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+  </footer>
+</div>
