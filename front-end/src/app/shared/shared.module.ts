@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {MobxAngularModule} from 'mobx-angular';
+import {EntryComponent} from 'src/app/shared/entry/entry.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,11 @@ import {MobxAngularModule} from 'mobx-angular';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MobxAngularModule
+    MobxAngularModule,
+    EntryComponent
+  ],
+  declarations: [
+    EntryComponent
   ]
 })
 export class SharedModule {}

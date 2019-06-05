@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'anima-menu',
@@ -7,12 +8,39 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
   }
 
-  get characterCreationLink():string{
-    return '/characterCreation';
+  // TODO Faire un tableau qui contient des objets {nom / lien} et generer les morceaux du menu à partiur de ca
+
+  goToCharacterCreation() {
+    this._router.navigate(['/characterCreation']);
   }
+
+  goToHome() {
+    this._router.navigate(['/home']);
+  }
+
+  get histoireName() {
+    return 'Histoire';
+  }
+
+  get characterName() {
+    return 'Character Creation';
+  }
+
+  get homeName() {
+    return 'Home';
+  }
+
+  get reglesName() {
+    return 'Règles';
+  }
+
+  get logoName() {
+    return 'LOGO';
+  }
+
 }
