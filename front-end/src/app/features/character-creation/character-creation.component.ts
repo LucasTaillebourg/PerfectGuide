@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {CharacterType} from 'src/app/shared/models';
+import {Subscriptor} from 'src/app/shared/util';
+import {CharacterCreationStore} from './character-creation.store';
 
 @Component({
   selector: 'anima-character-creation',
@@ -7,9 +10,16 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CharacterCreationComponent implements OnInit {
 
-  constructor() { }
+  private _subcribtor: Subscriptor;
+
+  constructor(private characterCreationStore: CharacterCreationStore) {}
 
   ngOnInit() {
+    this._subcribtor.trigger(this.characterCreationStore.fetchType());
+  }
+
+  get types(): CharacterType[] {
+    return this.characterCreationStore.types;
   }
 
 }
