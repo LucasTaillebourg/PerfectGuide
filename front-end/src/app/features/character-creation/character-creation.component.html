@@ -3,10 +3,9 @@
     character-creation works!
   </p>
   <ul *ngIf="types">
-    <div *ngFor="let type of types">
-      <li >
-        <p> Character Type :  {{type}}</p>
+      <li *ngFor="let type of types">
+        <p> Character Type :  {{type.name}}</p>
       </li>
-    </div>
   </ul>
+
 </ng-container>

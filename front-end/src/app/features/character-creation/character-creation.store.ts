@@ -16,7 +16,7 @@ export class CharacterCreationStore {
   @action
   fetchType(): Observable<CharacterType[]> {
     return this._http
-      .get<CharacterType[]>('localhost:8081/characterType')
+      .get<CharacterType[]>('/characterType')
       .pipe(bindAction((resp: CharacterType[]) => (this.types = resp)));
   }
 }

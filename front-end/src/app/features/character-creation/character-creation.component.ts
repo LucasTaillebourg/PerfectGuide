@@ -10,7 +10,7 @@ import {CharacterCreationStore} from './character-creation.store';
 })
 export class CharacterCreationComponent implements OnInit {
 
-  private _subcribtor: Subscriptor;
+  private _subcribtor: Subscriptor = new Subscriptor();
 
   constructor(private characterCreationStore: CharacterCreationStore) {}
 
