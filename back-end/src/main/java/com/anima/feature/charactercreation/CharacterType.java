@@ -8,6 +8,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CharacterType {
-    private String type;
+    private String name;
     private long id;
 }

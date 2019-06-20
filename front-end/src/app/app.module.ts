@@ -1,4 +1,5 @@
 import {CommonModule} from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
@@ -20,6 +21,7 @@ import {MenuComponent} from './menu/menu.component';
     AppRoutingModule,
     MobxAngularModule,
     CommonModule,
+    HttpClientModule,
     RouterModule.forRoot([])
   ],
   exports: [
