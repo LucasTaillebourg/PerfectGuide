@@ -17,8 +17,8 @@ export const routes: Routes = [
   //   component: PartenairesComponent
   // },
   {
-    path: 'characterCreation',
-    loadChildren: './features/character-creation/character-creation.module#CharacterCreationModule'
+    path: 'anima',
+    loadChildren: './features/anima/anima.module#AnimaModule'
   }
 ];
 
