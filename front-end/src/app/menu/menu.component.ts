@@ -15,28 +15,12 @@ export class MenuComponent implements OnInit {
 
   // TODO Faire un tableau qui contient des objets {nom / lien} et generer les morceaux du menu à partiur de ca
 
-  goToCharacterCreation() {
-    this._router.navigate(['/characterCreation']);
+  goToAnima() {
+    this._router.navigate(['/anima']);
   }
 
   goToHome() {
     this._router.navigate(['/home']);
-  }
-
-  get histoireName() {
-    return 'Histoire';
-  }
-
-  get characterName() {
-    return 'Character Creation';
-  }
-
-  get homeName() {
-    return 'Home';
-  }
-
-  get reglesName() {
-    return 'Règles';
   }
 
   get logoName() {

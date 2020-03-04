@@ -1,1 +1,1 @@
-export * from 'src/app/shared/models/characterType.model';
+export * from './anima'
