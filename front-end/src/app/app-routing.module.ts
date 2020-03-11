@@ -12,13 +12,13 @@ export const routes: Routes = [
     // canActivate: [FeaturesGuard, CguGuard],
     loadChildren: './features/home/home.module#HomeModule'
   },
-  // {
-  //   path: 'localiser',
-  //   component: PartenairesComponent
-  // },
   {
     path: 'anima',
     loadChildren: './features/anima/anima.module#AnimaModule'
+  },
+  {
+    path: 'gotc',
+    loadChildren: './features/gotc/gotc.module#GotcModule'
   }
 ];
 

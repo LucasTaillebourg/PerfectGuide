@@ -1,6 +1,6 @@
 import {ModuleWithProviders} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {CharacterCreationComponent} from 'src/app/features/character-creation/character-creation.component';
+import {CharacterCreationComponent} from './character-creation.component';
 
 
 export const routes: Routes = [
